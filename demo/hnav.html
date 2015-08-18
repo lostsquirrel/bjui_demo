@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <title>主页面结构</title>
+    <!-- bootstrap - css -->
+    <link href="/bjui/BJUI/themes/css/bootstrap.css" rel="stylesheet">
+    <!-- core - css -->
+    <link href="/bjui/BJUI/themes/css/style.css" rel="stylesheet">
+    <link href="/bjui/BJUI/themes/blue/core.css" id="bjui-link-theme" rel="stylesheet">
+    <!-- plug - css -->
+    <link href="/bjui/BJUI/plugins/kindeditor_4.1.10/themes/default/default.css" rel="stylesheet">
+    <link href="/bjui/BJUI/plugins/colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="/bjui/BJUI/plugins/niceValidator/jquery.validator.css" rel="stylesheet">
+    <link href="/bjui/BJUI/plugins/bootstrapSelect/bootstrap-select.css" rel="stylesheet">
+    <link href="/bjui/BJUI/themes/css/FA/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lte IE 7]>
+    <link href="/bjui/BJUI/themes/css/ie7.css" rel="stylesheet">
+    <![endif]-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lte IE 9]>
+        <script src="/bjui/BJUI/other/html5shiv.min.js"></script>
+        <script src="/bjui/BJUI/other/respond.min.js"></script>
+    <![endif]-->
+    <!-- jquery -->
+    <script src="/bjui/BJUI/js/jquery-1.7.2.min.js"></script>
+    <script src="/bjui/BJUI/js/jquery.cookie.js"></script>
+    <!--[if lte IE 9]>
+    <script src="/bjui/BJUI/other/jquery.iframe-transport.js"></script>
+    <![endif]-->
+    <!-- BJUI.all 分模块压缩版 -->
+    <!--
+    <script src="/bjui/BJUI/js/bjui-all.js"></script>
+     -->
+    <!-- 以下是B-JUI的分模块未压缩版，建议开发调试阶段使用下面的版本 -->
+
+    <script src="/bjui/BJUI/js/bjui-core.js"></script>
+    <script src="/bjui/BJUI/js/bjui-regional.zh-CN.js"></script>
+    <script src="/bjui/BJUI/js/bjui-frag.js"></script>
+    <script src="/bjui/BJUI/js/bjui-extends.js"></script>
+    <script src="/bjui/BJUI/js/bjui-basedrag.js"></script>
+    <script src="/bjui/BJUI/js/bjui-slidebar.js"></script>
+    <script src="/bjui/BJUI/js/bjui-contextmenu.js"></script>
+    <script src="/bjui/BJUI/js/bjui-navtab.js"></script>
+    <script src="/bjui/BJUI/js/bjui-dialog.js"></script>
+    <script src="/bjui/BJUI/js/bjui-taskbar.js"></script>
+    <script src="/bjui/BJUI/js/bjui-ajax.js"></script>
+    <script src="/bjui/BJUI/js/bjui-alertmsg.js"></script>
+    <script src="/bjui/BJUI/js/bjui-pagination.js"></script>
+    <script src="/bjui/BJUI/js/bjui-util.date.js"></script>
+    <script src="/bjui/BJUI/js/bjui-datepicker.js"></script>
+    <script src="/bjui/BJUI/js/bjui-ajaxtab.js"></script>
+    <script src="/bjui/BJUI/js/bjui-datagrid.js"></script>
+    <script src="/bjui/BJUI/js/bjui-tablefixed.js"></script>
+    <script src="/bjui/BJUI/js/bjui-tabledit.js"></script>
+    <script src="/bjui/BJUI/js/bjui-spinner.js"></script>
+    <script src="/bjui/BJUI/js/bjui-lookup.js"></script>
+    <script src="/bjui/BJUI/js/bjui-tags.js"></script>
+    <script src="/bjui/BJUI/js/bjui-upload.js"></script>
+    <script src="/bjui/BJUI/js/bjui-theme.js"></script>
+    <script src="/bjui/BJUI/js/bjui-initui.js"></script>
+    <script src="/bjui/BJUI/js/bjui-plugins.js"></script>
+    <!-- plugins -->
+
+    <!-- ztree -->
+    <script src="/bjui/BJUI/plugins/ztree/jquery.ztree.all-3.5.js"></script>
+    <!-- bootstrap plugins -->
+    <script src="/bjui/BJUI/plugins/bootstrap.min.js"></script>
+    <script src="/bjui/BJUI/plugins/bootstrapSelect/bootstrap-select.min.js"></script>
+    <script src="/bjui/BJUI/plugins/bootstrapSelect/defaults-zh_CN.min.js"></script>
+</head>
+
+<body>
+    <header id="bjui-header">
+        <!-- logo -->
+        <!-- 快捷菜单(消息、用户信息、切换皮肤) -->
+        <div id="bjui-hnav">
+            <button type="button" class="bjui-hnav-toggle btn-default" data-toggle="collapse" data-target="#bjui-hnav-navbar">
+                <i class="fa fa-bars"></i>
+            </button>
+            <ul id="bjui-hnav-navbar">
+                <!-- 欢迎 -->
+                <li style="width:204px;"><a>欢迎您，超级管理员！</a></li>
+
+                <!-- zTree菜单 - BEGIN -->
+                <li class="active"><a href="javascript:;" data-toggle="slidebar">表单元素</a>
+                    <div class="items hide" data-noinit="true">
+                        <ul id="bjui-hnav-tree-input" class="ztree ztree_main" data-toggle="ztree" data-on-click="MainMenuClick" data-expand-all="true" data-faicon="check-square-o" data-title="基本元素">
+                            <li data-id="1" data-pid="0" data-faicon="folder-open-o" data-faicon-close="folder-o">表单元素</li>
+                            <li data-id="10" data-pid="1" data-url="form-button.html" data-tabid="form-button" data-faicon="hand-o-up">按钮</li>
+                            <li data-id="11" data-pid="1" data-url="form-input.html" data-tabid="form-input" data-faicon="terminal">文本框</li>
+                            <li data-id="12" data-pid="1" data-url="form-select.html" data-tabid="form-select" data-faicon="caret-square-o-down">下拉选择框</li>
+                            <li data-id="13" data-pid="1" data-url="form-checkbox.html" data-tabid="table" data-faicon="check-square-o">复选、单选框</li>
+
+                        </ul>
+                        <ul id="bjui-hnav-tree-form" class="ztree ztree_main" data-toggle="ztree" data-on-click="MainMenuClick" data-expand-all="true" data-faicon="list" data-title="综合演示">
+                            <li data-id="1" data-pid="0" data-faicon="folder-open-o" data-faicon-close="folder-o">表单演示</li>
+                            <li data-id="14" data-pid="1" data-url="form.html" data-tabid="form" data-faicon="list">表单综合演示</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- zTree菜单 - END -->
+
+                <!-- 列表菜单 - BEGIN -->
+                <li><a href="javascript:;" data-toggle="slidebar">表单元素&演示</a>
+                    <div class="items hide" data-noinit="true">
+                        <ul class="menu-items" data-faicon="hand-o-up">
+                            <li><a href="form-button.html" data-options="{id:'form-button', faicon:'hand-o-up'}">按钮</a><b><i class="fa fa-angle-down"></i></b>
+                                <!-- 子级菜单 -->
+                                <ul class="menu-items-children">
+                                    <li><a href="form-input.html" data-options="{id:'form-input', faicon:'terminal'}">文本框</a></li>
+                                    <li><a href="form-select.html" data-options="{id:'form-select', faicon:'caret-square-o-down'}">下拉选择框</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="form-input.html" data-options="{id:'form-input', faicon:'terminal'}">文本框</a></li>
+                            <li><a href="form-select.html" data-options="{id:'form-select', faicon:'caret-square-o-down'}">下拉选择框</a></li>
+                            <li><a href="form-checkbox.html" data-options="{id:'form-checkbox', faicon:'check-square-o'}">复选、单选框</a></li>
+                        </ul>
+                        <ul class="menu-items" data-title="表单Demo" data-faicon="list">
+                            <li><a href="form.html" data-options="{id:'form-demo', faicon:'th-large'}">表单示例</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- zTree菜单 - End -->
+
+                <!-- 下拉菜单 - BEGIN -->
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <!-- 下拉菜单 -->
+                        下拉菜单
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#">
+                                <!-- 下拉菜单一 -->
+                                下拉菜单一
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <!-- 下拉菜单二 -->
+                                下拉菜单二
+                            </a>
+                        </li>
+                        ...
+                    </ul>
+                </li>
+                <!-- 下拉菜单 - END -->
+                ...
+            </ul>
+        </div>
+    </header>
+    <div id="bjui-container" class="clearfix">
+        <div id="bjui-leftside">
+            <!-- 导航栏 -->
+        </div>
+        <div id="bjui-navtab" class="tabsPage">
+            <!-- 工作区(navtab) -->
+        </div>
+    </div>
+    <footer id="bjui-footer">
+        <!-- 页脚 -->
+    </footer>
+    <script type="text/javascript" src="/bjui/demo/js/init.js"></script>
+</body>
+
+</html>
